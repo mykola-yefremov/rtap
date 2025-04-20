@@ -1,6 +1,8 @@
 # Real-Time Analytics Platform
 
-**Real-Time Analytics Platform** is a microservices-based system for collecting, processing, and visualizing real-time data using Apache Kafka, Spring Boot, Redis, and ClickHouse. It aggregates and stores data in real time, offering insights into user behavior, system performance, and key metrics with monitoring and alerting tools.
+> Real-Time Analytics Platform is a microservices-based system for collecting, processing, and visualizing real-time data
+> using Apache Kafka, Spring Boot, Redis, and ClickHouse. It aggregates and stores data in real time, offering insights into user behavior,
+> system performance, and key metrics with monitoring and alerting tools.
 
 ## Features
 - **Event Collection**: Collects real-time events from web and mobile applications.
