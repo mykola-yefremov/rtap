@@ -35,5 +35,5 @@ Make sure you have the following installed:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/real-time-analytics-platform.git
+git clone https://github.com/mykola-yefremov/real-time-analytics-platform.git
 cd real-time-analytics-platform
