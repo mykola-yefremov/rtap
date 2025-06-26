@@ -1,41 +1,28 @@
-# Real-Time Analytics Platform
+# RTAP
 
-> Real-Time Analytics Platform is a microservices-based system for collecting, processing, and visualizing real-time data
-> using Apache Kafka, Spring Boot, Redis, and ClickHouse. It aggregates and stores data in real time, offering insights into user behavior,
-> system performance, and key metrics with monitoring and alerting tools.
+Real-time analytics platform for high-throughput event processing and visualization.
 
-## Features
-- **Event Collection**: Collects real-time events from web and mobile applications.
-- **Real-Time Data Processing**: Uses Apache Kafka for real-time event streaming and processing.
-- **Data Aggregation**: Aggregates data in real time and stores it in OLAP databases like ClickHouse.
-- **Visualization**: Dashboards for data visualization using Grafana and Apache Superset.
-- **Alerting**: Real-time alerts based on thresholds using Kafka and integrated notification services.
-- **Scalable Architecture**: Built with microservices using Spring Boot, Docker, and Kubernetes for scalability.
+## Architecture Overview
 
-## Technologies
-- **Backend**: Java, Spring Boot, Kafka, Redis, PostgreSQL
-- **Data Storage**: ClickHouse, AWS S3/MinIO
-- **Real-Time Processing**: Apache Kafka, Kafka Streams
-- **Frontend/Visualization**: Grafana, Apache Superset
-- **Orchestration & Deployment**: Docker, Kubernetes, Terraform
-- **CI/CD**: GitHub Actions, Jenkins
-- **Notifications**: Telegram Bot API, JavaMail API
+This platform processes millions of events per day using:
+- Event ingestion via REST/gRPC APIs
+- Stream processing with Apache Kafka
+- OLAP storage with ClickHouse
+- Real-time dashboards with Grafana
 
-## Getting Started
+# Services
 
-### Prerequisites
-Make sure you have the following installed:
-- [Docker](https://www.docker.com/get-started)
-- [Kubernetes](https://kubernetes.io/docs/setup/)
-- [Java 11+](https://adoptopenjdk.net/)
-- [Apache Kafka](https://kafka.apache.org/)
-- [ClickHouse](https://clickhouse.com/)
-- [Grafana](https://grafana.com/)
-- [Apache Superset](https://superset.apache.org/)
+- **event-collector:** High-throughput event ingestion service
+- **event-processor:** Real-time stream processing with Kafka Streams
+- **storage-service:** Data storage and query API
+- **dashboard-service** Dashboard backend and analytics API
+- **notification-service:** Alert and notification service
 
-### Setup
-Clone the repository:
+## Quick Start
 
 ```bash
-git clone https://github.com/mykola-yefremov/real-time-analytics-platform.git
-cd real-time-analytics-platform
+# Start local development environment
+./scripts/dev-setup.sh
+
+# Run all services
+docker-compose -f docker/docker-compose.dev.yml up -d
