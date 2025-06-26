@@ -2,7 +2,7 @@
 
 set -e
 
-echo "🚀 Setting up RTAP Analytics Platform development environment..."
+echo "Setting up RTAP development environment..."
 
 if ! docker info > /dev/null 2>&1; then
     echo "Docker is not running. Please start Docker first."
